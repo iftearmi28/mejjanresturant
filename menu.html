@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="mejjan.css">
+    <!--Aos library-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Average Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Duru Sans' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="navbar " id="res-navbar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="menu-list">
+                    <button class="menu-dropdown">Menu <i class="fa fa-chevron-down"></i></button>
+                    <div class="menu-list-content">
+                        <a href="#breakfast" class="menu-link">Breakfast</a>
+                        <a href="#drinks" class="menu-link">Drinks</a>
+                        <a href="#launch-part-menu" class="menu-link">Launch</a>
+                        <a href="#dinner" class="menu-link">Dinner</a>
+                        <a href="#special" class="menu-link">Special Items</a>
+                    </div>
+                </div>
+                <a href="about-us.html" class="nav-link">Our Story</a>
+                <a href="about-us.html" class="nav-link">Delivery</a>
+                <a href="about-us.html#contact-form" class="nav-link">Contact </a>
+
+            </div>
+            <div class="nav-sticky" id="sticky-nav">
+                <span class="open-navbtn" id="open-navbar" onclick="openNav()">&#9776;</span>
+                <span><a href="#" class="logo-text">
+                        <p>OYTIJJO</p>
+                    </a>
+                    <p style="color: rgb(176, 177, 176);font-family: 'Sofia';padding-bottom: 5px;text-align: center;">
+                        The Plate Of Tradition</p>
+                </span>
+                <span class="order-cart" id="open-order-menu" onclick="openOrder()"><i
+                        class="fa fa-cart-plus"></i></span>
+            </div>
+        </nav>
+        <section>
+            <div class="order-menu" id="order-menu">
+                <a href="javascript:void(0)" class="close-order-btn" onclick="closeOrder()">&times;</a>
+                <div class="order-menu-content">
+                    <h1>Order Items</h1>
+                    <div class="order-form">
+                        <form class="order-form">
+                            <h1>Order Now</h1>
+                            <hr>
+                            <textarea id="location-area" class="text-area-location" name="location"
+                                placeholder="Please,  enter Your details. . . "></textarea>
+                            <span class="warning-location">*Detail requires are your location, phone number or email
+                                address.</span>
+                            <br>
+                            <br>
+                            <select class="people">
+                                <option value="1 Person" class="people-number">1 Person</option>
+                                <option value="2 People" class="people-number" selected="selected">2 People</option>
+                                <option value="3 People" class="people-number">3 People</option>
+                                <option value="4 People" class="people-number">4 People</option>
+                                <option value="5 People" class="people-number">5 People</option>
+                                <option value="6 People" class="people-number">6 People</option>
+                                <option value="7 People" class="people-number">7 People</option>
+                                <option value="8 People" class="people-number">8 People</option>
+                                <option value="9 People" class="people-number">9 People</option>
+                                <option value="10 People" class="people-number">10 People</option>
+                                <option value="11 People" class="people-number">11 People</option>
+                                <option value="12 People" class="people-number">12 People</option>
+                            </select>
+                            <input type="date" id="booking-date" class="booking-date">
+                            <select class="people">
+                                <option value="7:30 am" class="people-number">7:30 am</option>
+                                <option value="8:30 am" class="people-number">8:30 am</option>
+                                <option value="9:30 am" class="people-number">9:30 am</option>
+                                <option value="10:30 am" class="people-number">10:30 am</option>
+                                <option value="11:30 am" class="people-number">11:30 am</option>
+                                <option value="12:30 pm" class="people-number">12:30 pm</option>
+                                <option value="1:30 pm" class="people-number">1:30 pm</option>
+                                <option value="2:30 pm" class="people-number">2:30 pm</option>
+                                <option value="3:30 pm" class="people-number">3:30 pm</option>
+                                <option value="4:30 pm" class="people-number">4:30 pm</option>
+                                <option value="5:30 pm" class="people-number">5:30 pm</option>
+                                <option value="6:30 pm" class="people-number" selected="selected">6:30 pm</option>
+                                <option value="7:30 pm" class="people-number">7:30 pm</option>
+                                <option value="8:30 pm" class="people-number">8:30 pm</option>
+                                <option value="9:30 pm" class="people-number">9:30 pm</option>
+                                <option value="10:30 pm" class="people-number">10:30 pm</option>
+                            </select>
+                            <input type="submit" class="book-table-btn" value="Order Now">
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="slider header-intro-1 fade">
+            <article class="header-intro-details ">
+                <div class="header-intro-text">
+                    <h1>The MEZBAN</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur commodi nemo minima
+                        molestias in voluptatem itaque consequatur neque. Accusantium repellendus vitae ipsam
+                        dignissimos tenetur hic neque beatae porro veritatis voluptates.</p>
+            </article>
+        </section>
+        <section class="slider header-intro-2 fade">
+            <article class="header-intro-details">
+                <div class="header-intro-text">
+                    <h1>The MEZBAN</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur commodi nemo minima
+                        molestias in voluptatem itaque consequatur neque. Accusantium repellendus vitae ipsam
+                        dignissimos tenetur hic neque beatae porro veritatis voluptates.</p>
+            </article>
+        </section>
+        <section class="slider header-intro-3 fade">
+            <article class="header-intro-details">
+                <div class="header-intro-text">
+                    <h1>The MEZBAN</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur commodi nemo minima
+                        molestias in voluptatem itaque consequatur neque. Accusantium repellendus vitae ipsam
+                        dignissimos tenetur hic neque beatae porro veritatis voluptates.</p>
+            </article>
+        </section>
+    </header>
+    <main class="menu-intro">
+        <h1>MENU</h1>
+        <section class="menu-show-hide">
+
+            <div class="menu-btns">
+                <a href="#breakfast"><button class="menu-btns-1" id="menu-btns-1">See All</button></a>
+                <a href="#breakfast"><button class="menu-btns-2" id="menu-btns-2">Breakfast</button></a>
+                <a href="#drinks"><button class="menu-btns-3" id="menu-btns-3">Drinks</button></a>
+                <a href="#launch-part-menu"><button class="menu-btns-4" id="menu-btns-4">Launch</button></a>
+                <a href="#special"><button class="menu-btns-5" id="menu-btns-5">Special-Items</button></a>
+                <a href="#dinner"><button class="menu-btns-6" id="menu-btns-6">Dinner</button></a>
+            </div>
+        </section>
+    </main>
+
+    <main class="menu-box" id="menu-box">
+        <section class="menu-item1" id="menu-item1">
+
+            <article class="breakfast-menu" id="breakfast">
+                <h2>1. Breakfast</h2>
+                <hr>
+                <div class="breakfast-menu-item" id="coffee">
+                    <img src="https://images.pexels.com/photos/982612/pexels-photo-982612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="breakfast-menu-price">
+                        <h3>Coffee</h3>
+                        <br>
+                        <h4><b>Price:</b> 50/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="breakfast-menu-item" id="tea">
+                    <img src="https://images.pexels.com/photos/370018/pexels-photo-370018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="breakfast-menu-price">
+                        <h3>Tea</h3>
+                        <br>
+                        <h4><b>Price:</b> 30/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="breakfast-menu-item" id="snack">
+                    <img src="https://images.pexels.com/photos/4055104/pexels-photo-4055104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="breakfast-menu-price">
+                        <h3>Creamy Sancks</h3>
+                        <br>
+                        <h4><b>Price:</b> 60/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="breakfast-menu-item">
+                    <img src="https://images.pexels.com/photos/2119758/pexels-photo-2119758.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="breakfast-menu-price">
+                        <h3>Beef Burger</h3>
+                        <br>
+                        <h4><b>Price:</b> 70/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="breakfast-menu-item" id="burger">
+                    <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="breakfast-menu-price">
+                        <h3>Combo Burger</h3>
+                        <br>
+                        <h4><b>Price:</b> 75/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+                <div class="breakfast-menu-item" id="chapati">
+                    <img src="https://images.pexels.com/photos/6183634/pexels-photo-6183634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="breakfast-menu-price">
+                        <h3>Chapati-Dal Combo</h3>
+                        <br>
+                        <h4><b>Price:</b> 80/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+                <div class="breakfast-menu-item">
+                    <img src="https://images.pexels.com/photos/3023479/pexels-photo-3023479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="breakfast-menu-price">
+                        <h3>Hot-Dog</h3>
+                        <br>
+                        <h4><b>Price:</b> 50/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="drinks-menu" id="drinks">
+                <h2>2. Drinks</h2>
+                <hr>
+                <div class="drinks-menu-item" id="orange-juice">
+                    <img src="https://images.pexels.com/photos/5946606/pexels-photo-5946606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="drinks-menu-price">
+                        <h3>Orange Juice</h3>
+                        <br>
+                        <h4><b>Price:</b> 50/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="drinks-menu-item">
+                    <img src="https://images.pexels.com/photos/2109099/pexels-photo-2109099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="drinks-menu-price">
+                        <h3>Lemon Juice</h3>
+                        <br>
+                        <h4><b>Price:</b> 30/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="drinks-menu-item">
+                    <img src="https://images.pexels.com/photos/845552/pexels-photo-845552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="drinks-menu-price">
+                        <h3>Strawberry Juice</h3>
+                        <br>
+                        <h4><b>Price:</b> 40/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="drinks-menu-item">
+                    <img src="https://images.pexels.com/photos/1675976/pexels-photo-1675976.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="drinks-menu-price">
+                        <h3>Lachi</h3>
+                        <br>
+                        <h4><b>Price:</b> 50/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="drinks-menu-item">
+                    <img src="https://images.pexels.com/photos/775030/pexels-photo-775030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="drinks-menu-price">
+                        <h3>Mix-Fruits Juice</h3>
+                        <br>
+                        <h4><b>Price:</b> 50/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="drinks-menu-item">
+                    <img src="https://images.pexels.com/photos/2684260/pexels-photo-2684260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="drinks-menu-price">
+                        <h3>Water Melon Juice</h3>
+                        <br>
+                        <h4><b>Price:</b> 50/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="drinks-menu-item">
+                    <img src="https://images.pexels.com/photos/1879387/pexels-photo-1879387.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="drinks-menu-price">
+                        <h3>Coconut Juice</h3>
+                        <br>
+                        <h4><b>Price:</b> 50/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+        <section class="menu-item2" id="menu-item2">
+            <article class="lun-spe" id="lun-spe">
+                <div class="launch-menu" id="launch-part-menu">
+
+                    <h2>3. Launch </h2>
+                    <hr>
+                    <div class="launch-menu-item" id='mezjjan'>
+                        <img src="https://gfood.com.bd/wp-content/uploads/2020/10/7_Menu_RGB_700x800_Neo_2002001_1.jpg"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="launch-menu-price">
+                            <h3>Mezbani Full Meals</h3>
+                            <p style="color: rgb(136, 136, 113);">Rice, Beef Curry, Chickpea-lentils, Kalabuna, Nola.
+                            </p>
+                            <br>
+                            <h4><b>Price:</b> 380/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="launch-menu-item">
+                        <img src="https://images.pexels.com/photos/6260921/pexels-photo-6260921.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="launch-menu-price">
+                            <h3>Chicken Biryani</h3>
+                            <p style="color: rgb(133, 133, 110);">Biryani, 1 Chicken Piece.</p>
+                            <br>
+                            <h4><b>Price:</b> 30/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="launch-menu-item">
+                        <img src="https://images.pexels.com/photos/2624774/pexels-photo-2624774.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="launch-menu-price">
+                            <h3>Dum Biryani</h3>
+                            <p style="color: rgb(133, 133, 110);">Mix of Biryani, beef, Chicken & Egg.</p>
+                            <br>
+                            <h4><b>Price:</b> 200/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="launch-menu-item" id="kalabuna">
+                        <img src="https://punampaul.com/wp-content/uploads/2018/09/Kala-Ghost-Recipe.jpg" alt="menu-img"
+                            width="100%" height="auto" class="menu-img">
+                        <div class="launch-menu-price">
+                            <h3>Kalabuna</h3>
+                            <p style="color: rgb(133, 133, 110);">Specially Beef Fry.</p>
+                            <br>
+                            <h4><b>Price:</b> 120/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="launch-menu-item">
+                        <img src="https://static.toiimg.com/photo/60324819.cms" alt="menu-img" width="100%"
+                            height="auto" class="menu-img">
+                        <div class="launch-menu-price">
+                            <h3>Polao Biryani</h3>
+                            <p style="color: rgb(133, 133, 110);">Special Local Biryani.</p>
+                            <br>
+                            <h4><b>Price:</b> 250/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="launch-menu-item">
+                        <img src="https://www.travelandexplorebd.com/storage/app/public/posts/April2020/Morog%20Polao.jpg"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="launch-menu-price">
+                            <h3>Normal Lunch Meal</h3>
+                            <p style="color: rgb(133, 133, 110);">White Rice, Fish Curry, Beef Curry, Chicken Curry.</p>
+                            <br>
+                            <h4><b>Price:</b> 200/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="special-menu" id="special">
+                    <h2>5. Special Items</h2>
+                    <hr>
+
+                    <div class="special-menu-item" id="grill">
+                        <img src="https://images.pexels.com/photos/236887/pexels-photo-236887.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="special-menu-price">
+                            <h3>Chicken Grill</h3>
+                            <br>
+                            <h4><b>Price:</b> 100/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="special-menu-item" id="stick">
+                        <img src="https://images.pexels.com/photos/2233730/pexels-photo-2233730.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="special-menu-price">
+                            <h3>Beaf Stick</h3>
+                            <br>
+                            <h4><b>Price:</b> 120/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="special-menu-item">
+                        <img src="https://www.thespruceeats.com/thmb/vKcNrfaYEYarKM8WOfBScIl6ZYY=/1885x1414/smart/filters:no_upscale()/GettyImages-618764348-5c829cb746e0fb0001cbf4b4.jpg"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="special-menu-price">
+                            <h3>Special Poratta</h3>
+                            <br>
+                            <h4><b>Price:</b> 20/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="special-menu-item">
+                        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="special-menu-price">
+                            <h3>Chicken Shawarma</h3>
+                            <br>
+                            <h4><b>Price:</b> 90/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+
+                    <div class="special-menu-item" id="fuchka">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/14/54/c7/9f/fuchka-mix-plate.jpg"
+                            alt="menu-img" width="100%" height="auto" class="menu-img">
+                        <div class="special-menu-price">
+                            <h3>Special Fuchka</h3>
+                            <br>
+                            <h4><b>Price:</b> 70/=</h4>
+                            <br>
+                            <button class="add-list-btn">Add To List</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="dinner-menu" id="dinner">
+                <h2>4. Dinner </h2>
+                <hr>
+                <div class="dinner-menu-item">
+                    <img src="https://gfood.com.bd/wp-content/uploads/2020/10/7_Menu_RGB_700x800_Neo_2002001_1.jpg"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="dinner-menu-price">
+                        <h3>Mezbani Full Meals</h3>
+                        <p style="color: rgb(136, 136, 113);">Rice, Beef Curry, Chickpea-lentils, Kalabuna, Nola.</p>
+                        <br>
+                        <h4><b>Price:</b> 380/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="dinner-menu-item">
+                    <img src="https://punampaul.com/wp-content/uploads/2018/09/Kala-Ghost-Recipe.jpg" alt="menu-img"
+                        width="100%" height="auto" class="menu-img">
+                    <div class="dinner-menu-price">
+                        <h3>Kalabuna</h3>
+                        <p style="color: rgb(133, 133, 110);">Spacially Beef Fry.</p>
+                        <br>
+                        <h4><b>Price:</b> 120/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="dinner-menu-item">
+                    <img src="https://www.travelandexplorebd.com/storage/app/public/posts/April2020/Morog%20Polao.jpg"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="dinner-menu-price">
+                        <h3>Normal Lunch Meal</h3>
+                        <p style="color: rgb(133, 133, 110);">White Rice, Fish Curry, Beef Curry, Chicken Curry.</p>
+                        <br>
+                        <h4><b>Price:</b> 50/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="dinner-menu-item">
+                    <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Karthika_Gopalakrishnan/Aar_macher_Jhol.jpg"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="dinner-menu-price">
+                        <h3>Fish Curry</h3>
+                        <br>
+                        <h4><b>Price:</b> 120/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="dinner-menu-item">
+                    <img src="https://khadizaskitchen.files.wordpress.com/2014/09/0023.jpg?w=500" alt="menu-img"
+                        width="100%" height="auto" class="menu-img">
+                    <div class="dinner-menu-price">
+                        <h3>Beef Curry</h3>
+                        <br>
+                        <h4><b>Price:</b> 120/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="dinner-menu-item">
+                    <img src="https://www.gourmandize.com/cache/media/chicken-curry-recipe-2.jpg/ogresize.jpg"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="dinner-menu-price">
+                        <h3>Chicken Curry</h3>
+                        <br>
+                        <h4><b>Price:</b> 120/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="dinner-menu-item" id="dum">
+                    <img src="https://images.pexels.com/photos/2624774/pexels-photo-2624774.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="menu-img" width="100%" height="auto" class="menu-img">
+                    <div class="dinner-menu-price">
+                        <h3>Dum Biryani</h3>
+                        <p style="color: rgb(133, 133, 110);">Mix of Biryani, beef, Chicken & Egg.</p>
+                        <br>
+                        <h4><b>Price:</b> 200/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+                <div class="dinner-menu-item">
+                    <img src="https://static.toiimg.com/photo/60324819.cms" alt="menu-img" width="100%" height="auto"
+                        class="menu-img">
+                    <div class="dinner-menu-price">
+                        <h3>Polao Biryani</h3>
+                        <p style="color: rgb(133, 133, 110);">Special Local Biryani.</p>
+                        <br>
+                        <h4><b>Price:</b> 250/=</h4>
+                        <br>
+                        <button class="add-list-btn">Add To List</button>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+        <!--<section  class="menu-item3"id="menu-item3">
+        </section>-->
+
+        <section class="append-menu1" id="append-menu1"></section>
+        <section class="append-menu2" id="append-menu2"></section>
+        <section class="append-menu3" id="append-menu3"></section>
+
+        </section>
+    </main>
+    <br>
+    <section class="keep-update">
+        <article class="subs-info">
+            <h1>KEEP UP TO DATE WITH OYTIJJO</h1>
+            <p>Sign up to be the first to receive special news and event updates from Oytijjo.</p>
+        </article>
+        <div class="input-part">
+            <input type="email" class="email-subs" id="subs-email" placeholder="Email Address*" required>
+            <br>
+            <button type="submit" class="subs-btn">SUBSCRIBE</button>
+        </div>
+    </section>
+    <br>
+    <footer>
+        <div class="social-part">
+
+            <div class="social-part-icon">
+                <h1>SOCIAL</h1>
+                <br>
+                <span class="facebook"><a href="#"><i class="fa fa-facebook"></i></a> </span>
+                <span class="insta"> <a href="#"><i class="fa fa-instagram"></i></a> </span>
+                <span class="twitter"><a href="#"><i class="fa fa-twitter"></i></a> </span>
+                <span class="google-plus"> <a href="#"><i class="fa fa-google-plus"></i></a> </span>
+                <span class="whatsup"><a href="#"><i class="fa fa-whatsapp"></i></a></span>
+            </div>
+            <div>
+                <p class="right-issue"><a href="#" style="color: rgb(248, 44, 112);font-family: 'Sofia';">OYTIJJO</a>
+                    RESTAURANT 2021. ALL RIGHTS RESERVED <br><br><span class="right-issue-2">POWERED BY DIGITAL FUEL
+                        MARKETING</span></p>
+                <!--<p class="right-issue-2">POWERED BY DIGITAL FUEL MARKETING</p>-->
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
